@@ -1,5 +1,9 @@
 const getPosts = (req, res) => {
-  res.json({ msg: 'Posts route started ;)' });
+  res.json({ msg: 'Posts fetch' });
 };
 
-export { getPosts };
+const createPost = (req, res) => {
+  res.json({ msg: 'Post Creation' });
+};
+
+export { getPosts, createPost };
