@@ -10,10 +10,15 @@ const Home = () => {
   return (
     <Container maxwidth='lg'>
       <AppBar className={classes.appBar} position='static' color='inherit'>
-        <Typography variant='h2' align='center'>
+        <Typography variant='h2' align='center' className={classes.heading}>
           Photo Lab
         </Typography>
-        <img src={camera} alt='camera logo' height='60' />
+        <img
+          src={camera}
+          alt='camera logo'
+          height='60'
+          className={classes.image}
+        />
       </AppBar>
       <Grow in>
         <Container>
