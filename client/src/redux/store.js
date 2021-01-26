@@ -3,8 +3,8 @@ import thunk from 'react-thunk';
 
 import postReducer from './reducers/postReducer';
 
-const reducers = combineReducers({
+const rootReducers = combineReducers({
   posts: postReducer,
 });
 
-const store = createStore(reducers, compose(applyMiddleware(thunk)));
+const store = createStore(rootReducers, compose(applyMiddleware(thunk)));
