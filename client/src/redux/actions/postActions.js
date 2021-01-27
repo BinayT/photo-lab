@@ -10,7 +10,7 @@ export const getPosts = () => async (dispatch) => {
   try {
     dispatch({ type: POSTS_REQUEST });
 
-    const { data } = axios.get('/posts');
+    const { data } = await axios.get('/posts');
 
     dispatch({ type: POSTS_SUCCESS, payload: data });
   } catch (error) {

@@ -7,7 +7,7 @@ import {
 export const postReducer = (state = { posts: [] }, action) => {
   switch (action.type) {
     case POSTS_REQUEST:
-      return { loading: true };
+      return { loading: true, posts: [] };
     case POSTS_SUCCESS:
       return { loading: false, posts: action.payload };
     case POSTS_ERROR:
