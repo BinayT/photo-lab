@@ -1,10 +1,18 @@
-export const postReducer = (posts = [], action) => {
+import {
+  POSTS_REQUEST,
+  POSTS_SUCCESS,
+  POSTS_ERROR,
+} from '../constants/postConstants';
+
+export const postReducer = (state = { posts: [] }, action) => {
   switch (action.type) {
-    case 'FETCH_ALL_POSTS':
-      return posts;
-    case 'CREATE_POST':
-      return posts;
+    case POSTS_REQUEST:
+      return { loading: true };
+    case POSTS_SUCCESS:
+      return { loading: false, posts: action.payload };
+    case POSTS_ERROR:
+      return { loading: false, error: action.payload };
     default:
-      return posts;
+      return state;
   }
 };
